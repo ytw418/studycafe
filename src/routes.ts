@@ -9,9 +9,9 @@
 import type { RouteDefinition } from "svelte-spa-router";
 
 // 각 페이지 컴포넌트를 가져옵니다
-import Home from "./lib/Home.svelte"; // 홈 페이지
-import ProfileRegister from "./lib/ProfileRegister.svelte"; // 프로필 등록 페이지
-import ProfileSearch from "./lib/ProfileSearch.svelte"; // 프로필 검색 페이지
+import Home from "./routes/Home.svelte"; // 홈 페이지
+import ProfileRegister from "./routes/ProfileRegister.svelte"; // 프로필 등록 페이지
+import ProfileSearch from "./routes/ProfileSearch.svelte"; // 프로필 검색 페이지
 
 // 라우트 정의: URL 경로와 해당 컴포넌트를 매핑합니다
 const routes: RouteDefinition = {

@@ -1,82 +1,13 @@
-/**
- * Svelte 프로젝트를 위한 TypeScript 설정
- * @tsconfig/svelte의 기본 설정을 상속받아 사용합니다.
- * 이 설정은 Svelte 컴포넌트와 TypeScript를 함께 사용할 때 최적화되어 있습니다.
- */
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    /**
-     * JavaScript 파일에서의 타입 체크 설정
-     *
-     * allowJs: true - JavaScript 파일 사용 허용
-     * checkJs: true - JavaScript 파일에서도 타입 체크 수행
-     *
-     * .svelte 파일에서 JavaScript를 사용하는 것은 allowJs 설정과 관계없이 항상 가능합니다.
-     */
-
-    /**
-     * target: "ESNext"
-     * - TypeScript가 컴파일할 JavaScript 버전을 지정
-     * - ESNext는 최신 JavaScript 기능을 모두 사용 가능하게 함
-     * - 최신 브라우저와 Node.js 환경에서 최적의 성능 제공
-     */
     "target": "ESNext",
-
-    /**
-     * useDefineForClassFields: true
-     * - 클래스 필드 선언을 위한 최신 JavaScript 문법 사용
-     * - Object.defineProperty를 사용하여 클래스 필드 정의
-     * - 더 안전하고 예측 가능한 클래스 필드 동작 보장
-     */
     "useDefineForClassFields": true,
-
-    /**
-     * module: "ESNext"
-     * - 모듈 시스템으로 ESNext 사용
-     * - import/export 문법 사용 가능
-     * - 최신 JavaScript 모듈 기능 지원
-     */
     "module": "ESNext",
-
-    /**
-     * resolveJsonModule: true
-     * - JSON 파일을 모듈로 가져올 수 있게 함
-     * - import data from './data.json' 같은 구문 사용 가능
-     * - JSON 파일에 대한 타입 체크 제공
-     */
     "resolveJsonModule": true,
-
-    /**
-     * allowJs: true
-     * - JavaScript 파일(.js)을 프로젝트에서 사용 가능하게 함
-     * - TypeScript와 JavaScript 파일을 함께 사용 가능
-     * - 점진적인 TypeScript 마이그레이션 지원
-     */
     "allowJs": true,
-
-    /**
-     * checkJs: true
-     * - JavaScript 파일에서도 타입 체크 수행
-     * - JSDoc 주석을 통한 타입 정보 활용
-     * - JavaScript 코드의 타입 안정성 향상
-     */
     "checkJs": true,
-
-    /**
-     * isolatedModules: true
-     * - 각 파일을 독립적인 모듈로 처리
-     * - 파일 간의 타입 정보 공유 제한
-     * - 빌드 도구와의 호환성 향상
-     */
     "isolatedModules": true,
-
-    /**
-     * moduleDetection: "force"
-     * - 모든 파일을 모듈로 처리
-     * - 전역 스코프 오염 방지
-     * - 모듈 시스템의 일관성 유지
-     */
     "moduleDetection": "force"
   },
   "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
