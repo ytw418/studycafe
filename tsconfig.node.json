@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // TypeScript 빌드 정보 파일 위치
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+
+    // JavaScript 버전 설정
+    "target": "ES2022",
+    "lib": ["ES2023"],
+
+    // 모듈 시스템 설정
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    // 번들러 모드 설정
+    "moduleResolution": "bundler", // 번들러 호환 모듈 해석
+    "allowImportingTsExtensions": true, // .ts 확장자로 import 허용
+    "verbatimModuleSyntax": true, // 모듈 구문을 그대로 유지
+    "moduleDetection": "force", // 모든 파일을 모듈로 처리
+    "noEmit": true, // JavaScript 파일 생성하지 않음
+
+    /* Linting */
+    // 코드 품질 검사 설정
+    "strict": true, // 엄격한 타입 체크
+    "noUnusedLocals": true, // 사용하지 않는 지역 변수 검사
+    "noUnusedParameters": true, // 사용하지 않는 매개변수 검사
+    "noFallthroughCasesInSwitch": true, // switch 문의 fallthrough 방지
+    "noUncheckedSideEffectImports": true // 부작용이 있는 import 검사
+
+    // erasableSyntaxOnly 옵션은 제거됨
+    // 이 옵션은 TypeScript 5.0에서 제거되었으며, 더 이상 사용되지 않습니다.
+    // 대신 verbatimModuleSyntax 옵션을 사용하세요.
+  },
+  "include": ["vite.config.ts"]
+}
